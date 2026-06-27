@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Camera, Shield, Cpu, Activity, Info } from "lucide-react";
 import { FilesetResolver, HandLandmarker } from "@mediapipe/tasks-vision";
 
+
 interface WebcamStreamState {
   status: "inactive" | "requesting" | "active" | "error";
   permission: "not_requested" | "granted" | "denied";
@@ -309,7 +310,7 @@ export default function HandDetectorPage() {
     <main className="min-h-screen bg-background text-gray-100 p-6 flex flex-col items-center">
       <header className="w-full max-w-6xl mb-8 flex flex-col md:flex-row items-start md:items-center justify-between border-b border-purple-900/40 pb-4 gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent flex items-center gap-2">
+          <h1 className="text-2xl font-bold tracking-wider bg-clip-text bg-gradient-to-r from-primary to-accent flex items-center gap-2">
             <Cpu className="w-6 h-6 text-primary animate-pulse" />
             Hand Motion Webcam v1
           </h1>
